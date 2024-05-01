@@ -1,5 +1,5 @@
 @extends('layout.auth-layout')
-@section('pageTitle', isset($pageTitle) ? $pageTitle : 'Example Register')
+@section('pageTitle', isset($pageTitle) ? $pageTitle : 'Applicant Register')
 @section('content')
 
 <div class="register-box">

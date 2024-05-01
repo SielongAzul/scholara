@@ -2,7 +2,7 @@
 @section('pageTitle', isset($pageTitle)? $pageTitle : 'Applicant Login')
 @section('content')
 
-<div class="login-box">
+<div class="hold-transition login-page">
     <div class="login-logo">
       <a href="#"><b>Applicant</b>Login</a>
     </div>
@@ -50,18 +50,15 @@
             <!-- /.col -->
           </div>
         </form>
-  
-       
-    
+
   
         <p class="mb-1">
           <a href="">I forgot my password</a>
         </p>
-        <p class="mb-1">
+        <p class="mb-0">
 
           <a href="{{route ('applicant.register')}}">Sign up</a>
-    
-         
+
         </p>
 
       </div>

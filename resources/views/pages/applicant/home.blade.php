@@ -1,3 +1,5 @@
+@include('layout.app-layout')
+@include('pages.applicant.layout.applicant-sidebarnav')
 You made it dummy
 
 <a href="{{ route ('applicant.logoutHandler') }}" 

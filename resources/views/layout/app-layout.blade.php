@@ -18,17 +18,29 @@
 </head>
 <body>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @yield('content')  <!--Holds your login balls -->
 <!-- jQuery -->
-
-
-
-
 
 <script src="/back/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="/back/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+<script src="/back/dist/js/adminlte.min.js"></script>
 @stack('scripts')
 </body>
 </html>

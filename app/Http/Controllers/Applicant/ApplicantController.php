@@ -14,7 +14,7 @@ class ApplicantController extends Controller
 
     //Registration
     function create(Request $request){
-
+// 'variable name => validations'
         $request->validate([
               'fname'=>'required',
               'lname'=>'required',
@@ -24,7 +24,7 @@ class ApplicantController extends Controller
               
   
         ]);
-  
+  //Interacting with Database -> tblename = $command->varibable name
         $applicant= new Applicant();
         $applicant->fname = $request->fname;
         $applicant->lname = $request->lname;
