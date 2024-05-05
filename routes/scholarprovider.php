@@ -19,5 +19,7 @@ Route::prefix('scholarprovider')->name('scholarprovider.')->group(function(){
     Route::middleware(['auth:scholarprovider' ])->group(function(){
             Route::view('/home','pages.scholarprovider.home')->name('home');
             Route::post('/logout_handler',[ScholarproviderController::class,'logoutHandler'])->name('logoutHandler');//Creating Controller to make the user log out
+            Route::view('/add_scholarship','pages.scholarprovider.add-scholarship')->name('add_scholarship');  //Guest View if not login
+            Route::view('/show_scholarship','pages.scholarprovider.scholarship-list')->name('show_scholarship');  //Guest View if not login
     });
 });

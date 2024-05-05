@@ -17,6 +17,7 @@ Route::prefix('validator')->name('validator.')->group(function(){
     Route::middleware(['auth:validator',])->group(function(){
         Route::view('/home','pages.validator.home')->name('home');  // Admin view if logiged itn
         Route::post('/logout_handler',[ValidatorController::class,'logoutHandler'])->name('logoutHandler');//Creating Controller to make the user log out
+        Route::view('/validate_scholarship','pages.validator.scholarship-validation')->name('validate_scholarship');  // Admin view if logiged itn
     });
     
 });

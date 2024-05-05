@@ -14,8 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+
+Route::view('/providers','provider-index')->name('providers');
+Route::view('/listings','scholarship-listing')->name('listings');
+Route::view('/detail','scholarship-detail')->name('detail');
+
+
 
 
 Route::view('/sample-layout', 'sample-layout');

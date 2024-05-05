@@ -1,5 +1,9 @@
-You made it dummy
+@extends('layout.app-layout')
+@section('pageTitle', isset($pageTitle)? $pageTitle : 'Scholara | Validator home Home')
+@section('content')
 
-<a href="{{ route ('validator.logoutHandler') }}" 
-onclick="event.preventDefault(); document.getElementById('adminLogoutForm').submit();" class="btn btn-default btn-flat float-right">Sign out</a>
-<form action="{{ route('validator.logoutHandler') }}" id="adminLogoutForm" method="POST">@csrf</form>
+
+@include('pages.validator.layout.validator-sidebarnav')
+    Dashboard Menu
+
+@endsection

@@ -29,7 +29,7 @@
     
                   <li class="nav-header">User Database</li>
                 <li class="nav-item">
-                  <a href="widgets.html" class="nav-link active">
+                  <a href="{{route('applicant.show_application')}}" class="nav-link active">
                     <i class="nav-icon fas fa-users"></i>
                     <p>
                       All Applied Scholarship
@@ -37,29 +37,12 @@
                   </a>
                 </li>
 
-                <li class="nav-item">
-                  <a href="widgets.html" class="nav-link active">
-                    <i class="nav-icon fas fa-users"></i>
-                    <p>
-                      Registered Scholarship Providers
-                    </p>
-                  </a>
-                </li>
+    
 
                 
-      
 
                     <li class="nav-item">
-                      <a href="widgets.html" class="nav-link active">
-                        <i class="nav-icon fas fa-users"></i>
-                        <p>
-                          Registered Scholarship Providers
-                        </p>
-                      </a>
-                    </li>
-
-                    <li class="nav-item">
-                      <a href="widgets.html" class="nav-link active">
+                      <a href="{{route('applicant.applicant_profile')}}" class="nav-link active">
                         <i class="nav-icon fas fa-users"></i>
                         <p>
                           Profile
@@ -80,6 +63,7 @@
                     </li>
               
         </ul>
+
   
       </nav>
       <!-- /.sidebar-menu -->

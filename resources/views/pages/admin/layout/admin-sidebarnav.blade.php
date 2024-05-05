@@ -17,7 +17,7 @@
           <img src="/back/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="{{route('admin.home')}}" class="d-block">Admin Sample</a>
         </div>
       </div>
 
@@ -27,7 +27,7 @@
         <ul class="nav nav-pills nav-sidebar flex-column nav-legacy" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-header">Manage</li>
             <li class="nav-item ">
-                <a href="#" class="nav-link ">
+                <a href="{{route('admin.category_table')}}" class="nav-link ">
                   <i class="nav-icon fas fa-table"> </i>
                   <p>
                     Category
@@ -36,17 +36,12 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="../tables/simple.html" class="nav-link active">
+                    <a href="{{route('admin.category_table')}}" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Show All Scholarship Category</p>
                     </a>
                   </li>
-                  <li class="nav-item">
-                    <a href="../tables/data.html" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Add Scholarship Category</p>
-                    </a>
-                  </li>
+          
 
                 </ul>
 
@@ -60,22 +55,17 @@
                   </a>
                   <ul class="nav nav-treeview">
                     <li class="nav-item">
-                      <a href="../tables/simple.html" class="nav-link active">
+                      <a href="{{route('admin.show_scholarships')}}" class="nav-link ">
                         <i class="far fa-circle nav-icon"></i>
                         <p>Show All Scholarships</p>
                       </a>
                     </li>
-                    <li class="nav-item">
-                      <a href="../tables/data.html" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Show all Scholarship Status</p>
-                      </a>
-                    </li>
+ 
 
                   </ul>
                   <li class="nav-header">User Database</li>
                 <li class="nav-item">
-                  <a href="widgets.html" class="nav-link active">
+                  <a href="{{route('admin.show_applicants')}}" class="nav-link ">
                     <i class="nav-icon fas fa-users"></i>
                     <p>
                       Registered Applicants
@@ -83,14 +73,7 @@
                   </a>
                 </li>
 
-                <li class="nav-item">
-                  <a href="widgets.html" class="nav-link active">
-                    <i class="nav-icon fas fa-users"></i>
-                    <p>
-                      Registered Scholarship Providers
-                    </p>
-                  </a>
-                </li>
+                
 
                 
                 <li class="nav-item ">
@@ -103,13 +86,13 @@
                   </a>
                   <ul class="nav nav-treeview">
                     <li class="nav-item">
-                      <a href="../tables/simple.html" class="nav-link active">
+                      <a href="{{route('admin.show_validators')}}" class="nav-link ">
                         <i class="far fa-circle nav-icon"></i>
                         <p>Show All Validators</p>
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a href="../tables/data.html" class="nav-link">
+                      <a href="{{route('admin.add_validator')}}" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>Add Validators</p>
                       </a>
@@ -118,7 +101,7 @@
                   </ul>
 
                     <li class="nav-item">
-                      <a href="widgets.html" class="nav-link active">
+                      <a href="{{route('admin.show_providers')}}" class="nav-link ">
                         <i class="nav-icon fas fa-users"></i>
                         <p>
                           Registered Scholarship Providers
@@ -127,7 +110,7 @@
                     </li>
 
                     <li class="nav-item">
-                      <a href="widgets.html" class="nav-link active">
+                      <a href="widgets.html" class="nav-link ">
                         <i class="nav-icon fas fa-users"></i>
                         <p>
                           Profile
@@ -136,7 +119,7 @@
                     </li>
 
                     <li class="nav-item">
-                      <a href="widgets.html" class="nav-link active">
+                      <a href="widgets.html" class="nav-link ">
                         <i class="nav-icon fas fa-users"></i>
                         <p>
                           Transaction History
@@ -145,7 +128,7 @@
                     </li>
 
                     <li class="nav-item">
-                      <a href="widgets.html" class="nav-link active">
+                      <a href="widgets.html" class="nav-link">
                         <i class="nav-icon fas fa-users"></i>
                         <p>
                           Validation History
@@ -154,8 +137,9 @@
                     </li>
                     
                     <li class="nav-item">
-                      <a href="#.html" class="nav-link active">
-                        <i class="nav-icon fa-right-from-bracket"></i>
+                      <a href="{{ route ('admin.logoutHandler') }}" onclick="event.preventDefault(); document.getElementById('adminLogoutForm').submit();" class="nav-link">
+                        <i class="nav-icon fa-right-from-bracket"></i> 
+                        <form action="{{ route('admin.logoutHandler') }}" id="adminLogoutForm" method="POST" style="display: none;">@csrf</form>
                       
                         <p>
                           Sign Out
@@ -178,12 +162,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Sample Dashboard</h1>
+            <h1>Admin Dashboard</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard</li>
+              <li class="breadcrumb-item">Dashboard</li>
             </ol>
           </div>
         </div>
