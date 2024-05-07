@@ -21,7 +21,7 @@
       
         
           
-            <a href="£" class="btn btn-primary">Login</a>
+            <a href="{{route('scholarprovider.login')}}" class="btn btn-primary">Login</a>
          
 
             

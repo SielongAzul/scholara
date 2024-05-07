@@ -20,7 +20,7 @@
       
           <div class="ms-auto">
           
-            <a href="£" class="btn btn-primary">Login</a>
+            <a href="{{route('applicant.login')}}" class="btn btn-primary">Login</a>
           </div>
 
             
